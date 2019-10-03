@@ -1,0 +1,13 @@
+<!--component/songsheet_list/anySong-list.wxml-->
+<!-- 所有歌单 -->
+<view class="any-songsheet">
+  <view class="m-playlist-item">
+    <view class="m-list-item" wx:for="{{songsheet}}" wx:key="{{index}}" bindtap="showSheet" data-id="{{item.id}}">
+      <view class="list-item">
+        <image class="auto-img" mode="widthFix" src="{{item.picUrl}}"></image>
+      </view>
+      <view class="item-name">{{item.name}}</view>
+    </view>
+  </view>
+</view>
+

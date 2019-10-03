@@ -1,0 +1,56 @@
+/* component/mv_recommend/mv-recommend.wxss */
+.mv-recommend{
+  padding: 20rpx;
+}
+.space{
+  width: 100%;
+  height: 20rpx;
+}
+.mv-select{
+  padding: 10rpx 10rpx;
+  width: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+}
+.mv-select .mv-img{
+  height: 188rpx;
+  overflow: hidden;
+  border-radius: 5px;
+  position: relative;
+}
+.mv-select .mv-img .brief{
+  position: absolute;
+  left: 10rpx;
+  bottom: 10rpx;
+  color: #fff;
+  font-size: 22rpx;
+  overflow:hidden; 
+  text-overflow:ellipsis;
+  display:-webkit-box; 
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:1; 
+}
+.mv-select .mv-img .auto-img{
+  border-radius: 5px;
+}
+.mv-select .mv-detail{
+  padding: 12rpx 4rpx 0 12rpx;
+}
+.mv-name{
+  font-size: 28rpx;
+  overflow:hidden; 
+  text-overflow:ellipsis;
+  display:-webkit-box; 
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:1; 
+}
+.mv-artists{
+  color: #666;
+  margin-top: 6rpx;
+  font-size: 22rpx;
+  overflow:hidden; 
+  text-overflow:ellipsis;
+  display:-webkit-box; 
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:1; 
+}

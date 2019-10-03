@@ -1,0 +1,131 @@
+/* component/play_music/play-music.wxss */
+/* @import '../../style/weui.wxss'; */
+.audio {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 40rpx 32rpx 52rpx;
+    box-sizing: border-box;
+    /* text-align: center; */
+    overflow: hidden;
+    background: rgba(0,0,0,.18);
+}
+.contain{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  text-align: center;
+}
+.contain .con-name{
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+.audio .song-name{
+  width: 100%;
+  font-size: 38rpx;
+  font-weight: 700;
+  color: #fff;
+}
+.audio .sg-name{
+  width: 100%;
+  font-size: 24rpx;
+  padding: 30rpx 0 50rpx 0;
+  color: #fff;
+}
+.audio .bg {
+    background-color: #161824;
+    position: absolute;
+    top: 100rpx;
+    left: -100%;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 300%;
+    height: 180%;
+    z-index: -1;
+    filter: blur(80rpx);
+}
+
+.audio .poster {
+    width: 400rpx;
+    height: 400rpx;
+    border: 8px solid rgba(216, 225, 226, 0.1);
+    border-radius: 50%;
+    animation: rotate 15s linear infinite ;
+    animation-fill-mode: forwards;
+}
+/* 音频滚动条start */
+.control-process {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 120rpx;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.control-process slider{
+  margin: 10px 14px;
+}
+.control-process .slider {
+    width: 540rpx;
+}
+.control-process text {
+    font-size: 22rpx;
+    color: #fff;
+}
+/* 音频滚动条end */
+.contain .sg-icon{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+}
+.audio .icon-list {
+    width: 516rpx;
+    position: relative;
+    margin: 0 auto;
+    line-height: 102rpx;
+}
+
+.audio .icon-list .audio-icon + .audio-icon {
+    margin-left: 140rpx;
+}
+
+.audio .icon-list .pattern {
+    position: absolute;
+    right: 20rpx;
+}
+
+.audio image {
+    width: 64rpx;
+    height: 64rpx;
+    vertical-align: middle;
+}
+
+.audio .audio-play {
+    width: 92rpx;
+    height: 92rpx;
+}
+
+.audio .pattern {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    width: 44rpx;
+    height: 44rpx;
+}
+
+@keyframes rotate {
+  0%{
+    transform: rotate(0);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}

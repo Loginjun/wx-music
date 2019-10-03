@@ -1,0 +1,25 @@
+<!--component/singer_list/singer-list.wxml-->
+<view class="singer-list">
+  <view class="sg-flex" wx:for="{{singerlist}}" wx:key="{{index}}" data-id="{{item.id}}" bindtap="showSinger">
+    <view class="num">
+      <text>{{index+1}}</text>
+    </view>
+    <view class="sg-img">
+    <!-- aspectFill 短边显示出来，另一边长的裁剪 -->
+      <image class="auto-img" mode="aspectFill" src="{{item.picUrl}}"></image>
+    </view>
+    <view class="sg-detail">
+        <view class="sg-name">{{item.name}}</view>
+        <view class="sg-heat">
+          <view class="hot-img">
+            <image class="auto-img" mode="widthFix" src="../../images/hot_s.png" style="transform:scale(0.9)"></image>
+          </view>
+          <view class="sg-score">{{item.score}}</view>
+        </view>
+        <view class="sg-person">
+          <view class="name">#{{item.name}}#</view> 
+          <view class="topic-person">{{item.topicPerson}}人正在讨论</view>
+        </view>
+    </view>
+  </view>
+</view>

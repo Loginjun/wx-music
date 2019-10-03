@@ -1,0 +1,14 @@
+<!--component/mv_list/mv-list.wxml-->
+<view class="any-mv">
+  <view class="new-mv-list">
+      <view class="mv-list-item" wx:for="{{anymv}}" wx:key="{{index}}" bindtap="showMV" data-id="{{item.id}}">
+        <view class="mv-item">
+          <image class="auto-img" mode="widthFix" src="{{item.cover}}"></image>
+        </view>
+        <view class="mv-descript">
+          <view class="mv-name">{{item.name}}</view>
+          <view class="mv-briefDesc">{{item.briefDesc}}</view>
+        </view>
+      </view>
+  </view>
+</view>

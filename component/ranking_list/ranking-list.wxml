@@ -1,0 +1,46 @@
+<!--component/ranking_list/ranking-list.wxml-->
+<view class="ranking-list">
+  <view class="mv-title">官方榜</view>
+  <view class="rk-list">
+    <view wx:for="{{officialList}}" wx:key="{{index}}" bindtap="showSheet" data-id="{{item.id}}">
+      <view class="rk-flex"> 
+        <view class="rk-img">
+        <!-- <view class="cover"> -->
+          <image class="auto-img" mode="widthFix" src="{{item.coverImgUrl}}"></image>
+          <view class="rk-update">{{item.updateFrequency}}</view>
+        <!-- </view> -->
+        </view>
+        <!--  -->
+        <view class="rk-detail">
+          <view class="rk-top">1.{{item.tracks[0].first}} - {{item.tracks[0].second}}</view>
+          <view class="rk-top">2.{{item.tracks[1].first}} - {{item.tracks[1].second}}</view>
+          <view class="rk-top">3.{{item.tracks[2].first}} - {{item.tracks[2].second}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="mv-title">推荐榜</view>
+  <view class="rk-list">
+    <view class="recommend-list" wx:for="{{recommendList}}" wx:key="{{index}}" bindtap="showSheet" data-id="{{item.id}}">
+      <view class="rk-flex-recom">
+        <view class="rk-img">
+          <image class="auto-img" mode="widthFix" src="{{item.coverImgUrl}}"></image>
+          <view class="rk-update">{{item.updateFrequency}}</view>
+        </view>
+        <view class="rk-name">{{item.name}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="mv-title">更多榜单</view>
+  <view class="rk-list">
+    <view class="recommend-list" wx:for="{{moreList}}" wx:key="{{index}}" bindtap="showSheet" data-id="{{item.id}}">
+      <view class="rk-flex-recom">
+        <view class="rk-img">
+          <image class="auto-img" mode="widthFix" src="{{item.coverImgUrl}}"></image>
+          <view class="rk-update">{{item.updateFrequency}}</view>
+        </view>
+        <view class="rk-name">{{item.name}}</view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,80 @@
+<!--component/mv_list/mv-list-item.wxml-->
+<view class="video-detail">
+  <!-- video -->
+  <view class="video">
+    <video class="auto-video" src="{{mvdetail.brs['480']}}"></video>
+  </view>
+  <view class="v-title">
+    <view class="v-name">{{mvdetail.name}}</view>
+    <view class="v-pc">{{mvdetail.playCount}}次观看</view>
+    <view class="v-detail">
+      <view class="v-time">{{mvdetail.publishTime}} 发布</view>
+      <view class="v-desc">{{mvdetail.desc}}</view>
+    </view>
+  </view>
+  <!-- 数据 -->
+  <view class="mv-count">
+    <view class="con">
+      <view class="yes">点赞</view>
+      <view>{{mvdetail.likeCount}}</view>
+    </view>
+    <view class="con">
+      <view class="yes">收藏</view>
+      <view>{{mvdetail.subCount}}</view>
+    </view>
+    <view class="con">
+      <view class="yes">评论</view>
+      <view>{{mvdetail.commentCount}}</view>
+    </view>
+    <view class="con">
+      <view class="yes">分享</view>
+      <view>{{mvdetail.shareCount}}</view>
+    </view>
+  </view>
+  <!-- 线 -->
+  <view class="v-line"></view>
+  <!-- 歌手+收藏 -->
+  <view class="v-act-det">
+    <view class="v-head">
+      <!-- <image></image> -->
+    </view>
+    <view class="v-brief">{{mvdetail.briefDesc}}</view>
+    <view class="v-collect">+ 收 藏</view>
+  </view>
+  <view class="whitespace"></view>
+  <!-- 评论 -->
+  <view class="v-comment">
+    <view class="mv-title">精彩评论</view>
+    <view class="hotComments">
+      <view wx:for="{{hotComments}}" wx:key="{{index}}">
+        <view class="com-flex">
+          <view class="man-img">
+            <image class="auto-img" mode="widthFix" src="{{item.user.avatarUrl}}" style="transform:scale(0.8);"></image>
+          </view>
+          <view class="man-msg">
+            <view class="nickname">{{item.user.nickname}}</view>
+            <view class="likedCount">{{item.likedCount}} 赞</view>
+            <!-- <view>{{item.time}}</view> -->
+            <view class="content">{{item.content}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="mv-title">最新评论 <view class="total">{{total}}</view></view>
+    <view class="newComments">
+      <view wx:for="{{moreComments}}" wx:key="{{index}}">
+      <view class="com-flex">
+          <view class="man-img">
+            <image class="auto-img" mode="widthFix" src="{{item.user.avatarUrl}}" style="transform:scale(0.8);"></image>
+          </view>
+          <view class="man-msg">
+            <view class="nickname">{{item.user.nickname}}</view>
+            <view class="likedCount">{{item.likedCount}} 赞</view>
+            <!-- <view>{{item.time}}</view> -->
+            <view class="content">{{item.content}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

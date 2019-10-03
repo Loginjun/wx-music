@@ -1,0 +1,47 @@
+<!--component/hot_song/hot-song.wxml-->
+<!--component/songsheet_list/songsheet-list.wxml-->
+<view class="header">
+  <view class="h-cover">
+      <view class="cover" style="background-image:url({{hotsong.coverImgUrl}})"></view>
+      <view class="h-cover-flex" >
+        <view class="h-img">
+          <image class="auto-img" mode="widthFix" src="{{hotsong.coverImgUrl}}"></image>
+        </view>
+        <view class="h-title">
+          <view class="title">{{hotsong.name}}</view>
+          <view class="avatar">
+            <view class="avatar-img">
+                <image class="auto-img" mode="widthFix" src="{{name.avatarUrl}}"></image>
+            </view>
+            <view class="avatar-name">{{name.nickname}}</view>
+          </view>
+        </view>
+      </view>
+  </view>
+</view>
+<!-- 标签 -->
+<view class="label">
+  <view class="s-label">
+    <view class="tags">标签：{{hotsong.tags}}</view>
+    <view class="s-desc">
+      <view class="description">简介：{{hotsong.description}}</view>
+    </view>
+  </view>
+</view>
+<view class="song-list">歌曲列表</view>
+<view class="song-list-item" wx:for="{{hotsong.tracks}}" wx:key="{{index}}" data-id="{{item.id}}" bindtap="playSong">
+  <view class="list-item">
+    <view class="num">
+      <text>{{index+1}}</text>
+    </view>
+    <view class="song">
+      <view class="name">{{item.name}}</view>
+      <view class="actor">{{item.ar[0].name}} - {{item.al.name}}</view>
+    </view>
+    <view class="start">
+      <image class="auto-img" mode="widthFix" src="../../images/play.png" style="transform:scale(0.55);"></image>
+    </view>
+  </view>
+</view>
+<view class="foot">我是有底线的(^ω^)</view>
+

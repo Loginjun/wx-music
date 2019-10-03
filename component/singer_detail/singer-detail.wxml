@@ -1,0 +1,42 @@
+<!--component/singer_detail/singer-detail.wxml-->
+<!--component/songsheet_list/songsheet-list.wxml-->
+<view class="header">
+  <view class="h-cover">
+      <view class="cover" style="background-image:url({{artist.picUrl}})"></view>
+      <view class="h-cover-flex" >
+        <view class="h-title">
+          <view class="title">{{artist.name}}</view>
+          <view>昵称：{{artist.name}}</view>
+          <view wx:if="{{artist.alias.length != 0}}">艺名：{{artist.alias}}</view>
+          <view>歌曲总数： {{artist.musicSize}}</view>
+          <view>专辑： {{artist.albumSize}}</view>
+          <view>MV： {{artist.mvSize}}</view>
+        </view>
+      </view>
+  </view>
+</view>
+<!-- 标签 -->
+<view class="label">
+  <view class="s-label">
+    <view class="s-desc">
+      <view class="description">简介：{{artist.briefDesc}}</view>
+    </view>
+  </view>
+</view>
+<view class="song-list">热门歌曲{{singersong.length}}</view>
+<view class="song-list-item" wx:for="{{singersong}}" wx:key="{{index}}" data-id="{{item.id}}" bindtap="playSong">
+  <view class="list-item">
+    <view class="num">
+      <text>{{index+1}}</text>
+    </view>
+    <view class="song">
+      <view class="name">{{item.name}}</view>
+      <view class="actor">{{item.ar[0].name}} - {{item.al.name}}</view>
+    </view>
+    <view class="start">
+      <image class="auto-img" mode="widthFix" src="../../images/play.png" style="transform:scale(0.55);"></image>
+    </view>
+  </view>
+</view>
+<view class="foot">我是有底线的(^ω^)</view>
+

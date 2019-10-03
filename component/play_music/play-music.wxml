@@ -1,0 +1,35 @@
+<!-- 播放音乐-->
+<view class="audio">
+<view class="contain">
+    <audio src="{{song.url}}" id="myAudio" bindtimeupdate='bindtimeupdate'></audio>
+    <view class="con-name">
+      <view class="song-name">{{songdetail[0].name}}</view>
+      <view class="sg-name">{{songdetail[0].ar[0].name}}</view>
+      <image mode="aspectFill" class="poster" src="{{songdetail[0].al.picUrl}}"></image>
+    </view>
+    <image class="bg" src="{{songdetail[0].al.picUrl}}" style="transform:scale(0.8)"></image>
+    <view class="control-process">
+        <text class="current-process">{{currentTime}}</text>
+        <slider class="slider" 
+            bindchange="hanle_slider_change" 
+            bindtouchstart="handle_slider_move_start" 
+            bindtouchend="handle_slider_move_end" 
+            min="0" 
+            block-size="8" 
+            max="{{width}}" 
+            activeColor="#fff" 
+            backgroundColor="rgba(255,255,255,.3)" 
+            value="{{slider_value}}"
+        />
+        <text class="total-process">{{duration}}</text>
+    </view>
+    <view class="sg-icon">
+    <view class="icon-list ">
+        <image bindtap="prev" mode="widthFix" src="../../images/prev.png" class="audio-icon" style="transform:scale(0.8)"></image>
+        <image mode="widthFix" src="{{isplaying? '../../images/start.png' : '../../images/stop.png'}}" class="audio-icon audio-play" bindtap="changeState"></image>
+        <image bindtap="next" mode="widthFix" src="../../images/next.png" class="audio-icon" style="transform:scale(0.8)"></image>
+<!-- <image hidden mode="widthFix" class="pattern" src="{{is_loop ? '/images/audio_loop.png': '/images/audio_un_loop.png'}}" bindtap="play_loop"></image> -->
+    </view>
+    </view>
+</view>
+</view>

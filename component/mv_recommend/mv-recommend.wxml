@@ -1,0 +1,84 @@
+<!--component/mv_recommend/mv-recommend.wxml-->
+<view class="mv-recommend">
+  <view class="mv-title">MV精选</view>
+  <view class="mv-select" wx:for="{{recommendmv}}" wx:key="{{index}}" bindtap="showMV" data-id="{{item.id}}">
+    <view class="mv-img">
+      <image class="auto-img"  mode="widthFix" src="{{item.picUrl}}"></image>
+    </view>
+    <view class="mv-detail">
+      <view class="mv-name">{{item.name}}</view>
+      <view class="mv-artists">{{item.artistName}}</view>
+    </view>
+  </view>
+  <view class="space"></view>
+  <view class="mv-title">网易出品</view>
+  <view class="mv-select" wx:for="{{neteasemv}}" wx:key="{{index}}" bindtap="showMV" data-id="{{item.id}}">
+    <view class="mv-img">
+      <image class="auto-img"  mode="widthFix" src="{{item.cover}}"></image>
+    </view>
+    <view class="mv-detail">
+      <view class="mv-name">{{item.name}}</view>
+      <view class="mv-artists">{{item.artistName}}</view>
+    </view>
+  </view>
+  <view class="space"></view>
+  <view class="mv-title">内地</view>
+  <view class="mv-select" wx:for="{{mainland}}" wx:key="{{index}}" bindtap="showMV" data-id="{{item.id}}">
+    <view class="mv-img">
+      <image class="auto-img"  mode="widthFix" src="{{item.cover}}"></image>
+      <view class="brief">{{item.briefDesc}}</view>
+    </view>
+    <view class="mv-detail">
+      <view class="mv-name">{{item.name}}</view>
+      <view class="mv-artists">{{item.artistName}}</view>
+    </view>
+  </view>
+  <view class="space"></view>
+  <view class="mv-title">港台</view>
+  <view class="mv-select" wx:for="{{hongktaiw}}" wx:key="{{index}}" bindtap="showMV" data-id="{{item.id}}">
+    <view class="mv-img">
+      <image class="auto-img"  mode="widthFix" src="{{item.cover}}"></image>
+      <view class="brief">{{item.briefDesc}}</view>
+    </view>
+    <view class="mv-detail">
+      <view class="mv-name">{{item.name}}</view>
+      <view class="mv-artists">{{item.artistName}}</view>
+    </view>
+  </view>
+  <view class="space"></view>
+  <view class="mv-title">欧美</view>
+  <view class="mv-select" wx:for="{{europeusa}}" wx:key="{{index}}" bindtap="showMV" data-id="{{item.id}}">
+    <view class="mv-img">
+      <image class="auto-img"  mode="widthFix" src="{{item.cover}}"></image>
+      <view class="brief">{{item.briefDesc}}</view>
+    </view>
+    <view class="mv-detail">
+      <view class="mv-name">{{item.name}}</view>
+      <view class="mv-artists">{{item.artistName}}</view>
+    </view>
+  </view>
+  <view class="space"></view>
+  <view class="mv-title">韩国</view>
+  <view class="mv-select" wx:for="{{koreamv}}" wx:key="{{index}}" bindtap="showMV" data-id="{{item.id}}">
+    <view class="mv-img">
+      <image class="auto-img"  mode="widthFix" src="{{item.cover}}"></image>
+      <view class="brief">{{item.briefDesc}}</view>
+    </view>
+    <view class="mv-detail">
+      <view class="mv-name">{{item.name}}</view>
+      <view class="mv-artists">{{item.artistName}}</view>
+    </view>
+  </view>
+  <view class="space"></view>
+  <view class="mv-title">日本</view>
+  <view class="mv-select" wx:for="{{japanmv}}" wx:key="{{index}}" bindtap="showMV" data-id="{{item.id}}">
+    <view class="mv-img">
+      <image class="auto-img"  mode="widthFix" src="{{item.cover}}"></image>
+      <view class="brief">{{item.briefDesc}}</view>
+    </view>
+    <view class="mv-detail">
+      <view class="mv-name">{{item.name}}</view>
+      <view class="mv-artists">{{item.artistName}}</view>
+    </view>
+  </view>
+</view>

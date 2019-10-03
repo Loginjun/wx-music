@@ -1,0 +1,27 @@
+API来自网易云音乐API：  https://binaryify.github.io/NeteaseCloudMusicApi/#/ ,或者 http://47.100.48.11:4000
+
+组件：component（太多组件自己老是忘记哪个是哪个，在这里说明一下）
+
+hot_sheet      -- 热门歌单  √
+
+hot_song       -- 热歌榜   √
+
+mv_list        -- 全部MV  √
+mv-list-item   -- MV详情播放页   √
+
+mv_recommend   -- 推荐MV   √
+
+play_music     -- 播放音乐页  x
+
+ranking_list   -- 排行榜  √
+
+singer_detail  -- 歌手详情页  √
+
+singer_list    -- 歌手榜   √
+
+songsheet_list -- 歌单   √
+anySong-list   -- 歌单广场  √
+
+search -- 搜索页面  x
+
+wx.playBackgroundAudio(OBJECT)

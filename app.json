@@ -1,0 +1,52 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/collect/collect",
+    "pages/mine/mine",
+    "pages/logs/logs",
+    "component/songsheet_list/songsheet-list",
+    "component/songsheet_list/anySong-list",
+    "component/mv_list/mv-list",
+    "component/mv_list/mv-list-item",
+    "component/mv_recommend/mv-recommend",
+    "component/hot_sheet/hot-sheet",
+    "component/ranking_list/ranking-list",
+    "component/hot_song/hot-song",
+    "component/singer_list/singer-list",
+    "component/singer_detail/singer-detail",
+    "component/play_music/play-music",
+    "component/play_music/play"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#d43c33",
+    "navigationBarTitleText": "MUSIC",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "乐库",
+        "iconPath": "./images/music.png",
+        "selectedIconPath": "./images/music_active.png"
+      },
+      {
+        "pagePath": "pages/collect/collect",
+        "text": "正在播放",
+        "iconPath": "./images/collect.png",
+        "selectedIconPath": "./images/collect_active.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "./images/mine.png",
+        "selectedIconPath": "./images/mine_active.png"
+      }
+    ]
+  },
+  "requiredBackgroundModes": [
+    "audio"
+  ],
+  "sitemapLocation": "sitemap.json"
+}

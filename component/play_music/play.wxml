@@ -1,0 +1,51 @@
+<!-- play.wxml -->
+<image src="{{songImg}}" class="background_img" ></image>
+<view class="body">
+ <!-- 歌名歌手 -->
+  <view class="sing-brief">
+    <view class="sing-name">{{song.name}}</view>
+    <view class="singer-name">
+      <text wx:for="{{song.ar}}" wx:key="{{index}}" class="singer-name-text">{{item.name}}</text>
+    </view>
+  </view>
+  <!-- 封面 -->
+  <!-- 一开始onload时,showLyric=true, 显示为转动的图标，点击图标，切换为歌词-->
+  <view class="sing-show" bindtap="showLyric" >
+    <view class="moveCircle {{isPlay ? 'play' : ''}}" hidden="{{!showLyric}}">
+      <image src="{{songImg}}" class="coverImg {{isPlay ? 'play' : ''}}" hidden="{{!showLyric}}"/>
+    </view>
+    <view class="song-lyric" hidden="{{showLyric}}">
+      <scroll-view class="middle" scroll-y="true" scroll-top="{{scrolltop}}">
+      <view class="lyric-height" wx:for="{{lyric}}" wx:key="{{index}}">
+        <text class="songLyric">{{item}}</text>
+      </view>
+      </scroll-view>
+    </view>
+  </view>
+  <!-- 进度条 -->
+  <!-- <view class="control-process">
+        <text class="current-process">{{currentTime}}</text>
+        <slider class="slider" 
+            bindchange="hanle_slider_change" 
+            bindtouchstart="handle_slider_move_start" 
+            bindtouchend="handle_slider_move_end" 
+            min="0" 
+            block-size="8" 
+            max="{{slider_max}}" 
+            activeColor="#fff" 
+            backgroundColor="rgba(255,255,255,.3)" 
+            value="{{slider_value}}"
+        />
+        <text class="total-process">{{duration}}</text>
+  </view> -->
+  <!-- 暂停播放图标 -->
+  <view class="play_suspend">
+    <view class="icon_playing "><image src="../../images/prev.png" class=" icon_play" bindtap="go_lastSong" /></view>
+    <view class="icon_playing">
+      <image  src="../../images/stop.png" hidden="{{!isPlay}}" class="{{'img_play_suspend'}}" bindtap="handleToggleBGAudio"/>  <!-- 暂停图标-->
+      <image src="../../images/start.png" hidden="{{isPlay}}" class="{{'img_play_suspend'}}" bindtap="handleToggleBGAudio"/> <!--播放图标-->
+    </view> 
+    <view class="icon_playing "><image src="../../images/next.png" class=" icon_play" bindtap="go_lastSong" /></view>
+  </view>
+</view>
+

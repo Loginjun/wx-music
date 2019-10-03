@@ -1,0 +1,65 @@
+/* component/ranking_list/ranking-list.wxss */
+.ranking-list{
+  padding: 20rpx;
+}
+.rk-list{
+  padding-bottom: 20rpx; 
+}
+.rk-flex{
+  display: flex;
+  padding: 10rpx;
+}
+.rk-img{
+  flex: 0 0 216rpx;
+  width: 216rpx;
+  height: 216rpx;
+  position: relative;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.1) 15%,
+    rgba(0,0,0,0.01) 35%,
+    transparent 50%
+  );
+}
+.rk-img .auto-img{
+  border-radius: 5px;
+  position: absolute;
+  z-index: -1;
+}
+.rk-img .rk-update{
+  position: absolute;
+  left: 10rpx;
+  bottom: 10rpx;
+  color: #fff;
+  font-size: 22rpx;
+  overflow:hidden; 
+  text-overflow:ellipsis;
+  display:-webkit-box; 
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:1; 
+}
+.rk-detail{
+  flex: 1;
+  padding: 20rpx;
+  display: flex;
+	flex-direction:column;
+  justify-content: space-between;
+}
+.rk-detail .rk-top{
+  font-size: 28rpx;
+  color: #666;
+}
+.recommend-list{
+  display: inline-block;
+  width: 33.33%;
+  padding: 10rpx;
+  box-sizing: border-box;
+  vertical-align: text-top;
+}
+.rk-flex-recom{
+
+}
+.rk-flex-recom .rk-name{
+  padding: 10rpx 0;
+  font-size: 26rpx;
+}

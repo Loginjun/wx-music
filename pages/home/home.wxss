@@ -1,0 +1,236 @@
+/* pages/home/home.wxss */
+view{
+  display: block;
+}
+.search-input{
+  width: 100%;
+  height: 46px;
+  background-color: #d43c33;
+  padding: 8px 10px;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+.input{
+  width: 100%;
+  height: 28px;
+  border-radius: 20rpx;
+  background-color: #DE655C;
+}
+.weui-search-bar__label{
+  height: 28px;
+  position: absolute;
+  right: 10px;
+  left: 10px;
+  z-index: 2;
+  border-radius: 20rpx;
+  text-align: center;
+  color: #9b9b9b;
+  background-color: #DE655C;
+  line-height: 28px;
+}
+.weui-icon-search {
+  margin-right: 8px;
+  font-size: inherit;
+}
+icon{
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0;
+}
+.weui-search-bar__text{
+  color: #EDA8A3;
+  display: inline-block;
+  font-size: 14px;
+  line-height: 28px;
+}
+/* 轮播 */
+.banner{
+  margin-top: 46px; 
+}
+.auto-img{
+  position: relative;
+}
+.type{
+  padding: 6rpx 10rpx;
+  border-top-left-radius: 5px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  font-size: 12px;
+  color: #fff;
+}
+/* 导航 */
+.nav{
+  height: 200rpx;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx; 
+}
+.nav-list{
+  flex: 1;
+}
+.nav-item{
+  width: 100%;
+  padding: 24rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.nav-item-rang{
+  width: 100%;
+  height: 100%;
+  background-color: #d43c33;
+  border-radius: 50%;
+}
+.nav-list .nav-item-rang .auto-img{
+  
+}
+.nav-title{
+  font-size: 24rpx;
+  text-align: center;
+}
+/* 推荐  */
+
+.m-homeremd{
+  padding: 20rpx;
+}
+.m-title{
+  padding: 10rpx 10rpx;
+}
+.m-title .m-tui{
+  display: inline-block;
+  font-size: 30rpx;
+  font-weight: 700;
+  vertical-align: top;
+}
+.m-title .m-square{
+  padding: 2rpx 12rpx;
+  display: inline-block;
+  font-size: 24rpx;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  float: right;
+  vertical-align: middle;
+}
+.m-playlist-item{
+  width: 100%;
+  /* display: flex; */
+}
+.m-list-item{
+  display: inline-block;
+  width: 33.33%;
+  padding: 10rpx;
+  box-sizing: border-box;
+  vertical-align: text-top;
+}
+.list-item{
+  width: 100%;
+}
+.list-item .auto-img{
+  border-radius: 5px;
+}
+.item-name{
+  padding: 12rpx 4rpx 0 12rpx;
+  font-size: 24rpx;
+  overflow:hidden; 
+  text-overflow:ellipsis;
+  display:-webkit-box; 
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:2; 
+}
+/* 最新MV */
+.m-hot-mv{
+  padding: 20rpx;
+}
+.new-mv-list{
+  width: 100%;
+}
+.mv-list-item{
+  display: inline-block;
+  width: 50%;
+  padding: 10rpx;
+  box-sizing: border-box;
+  vertical-align: text-top;
+}
+.mv-item{
+  width: 100%;
+  height: 188rpx;
+  overflow: hidden;
+   border-radius: 5px;
+}
+.mv-item .auto-img{
+  width: 100%;
+  height: 100%;
+}
+.mv-descript{
+  padding: 12rpx 4rpx 0 12rpx;
+}
+.mv-name{
+  font-size: 28rpx;
+  overflow:hidden; 
+  text-overflow:ellipsis;
+  display:-webkit-box; 
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:1; 
+}
+.mv-briefDesc{
+  color: #666;
+  margin-top: 6rpx;
+  font-size: 24rpx;
+  overflow:hidden; 
+  text-overflow:ellipsis;
+  display:-webkit-box; 
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:1; 
+}
+
+
+/* 最新音乐 */
+.m-song{
+  padding: 20rpx 20rpx 0 20rpx;
+}
+.song-list-item{
+  width: 100%;
+}
+.song-list-item .list-item{
+  height: 110rpx;
+  display: flex;
+}
+.list-item .song{
+  flex: 1;
+  padding: 12rpx 0 12rpx 10rpx;
+  border-bottom: 1px solid #f0f0f0;
+}
+.list-item .song .name{
+  color: #333;
+  font: 14px/1.5 Helvetica,sans-serif,STHeiTi;
+  font-size: 34rpx;
+  overflow:hidden; 
+  text-overflow:ellipsis;
+  display:-webkit-box; 
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:1; 
+}
+.list-item .song .actor{
+  /* margin-top: 10rpx; */
+  font-size: 24rpx;
+  color: #888;
+  overflow:hidden; 
+  text-overflow:ellipsis;
+  display:-webkit-box; 
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:1; 
+}
+.list-item .start{
+  flex: 0 0 84rpx;
+  width: 84rpx;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+

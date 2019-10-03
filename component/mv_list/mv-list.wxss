@@ -1,0 +1,44 @@
+/* component/mv_list/mv-list.wxss */
+.any-mv{
+  padding: 10rpx;
+}
+.new-mv-list{
+  width: 100%;
+}
+.mv-list-item{
+  display: inline-block;
+  width: 50%;
+  padding: 10rpx;
+  box-sizing: border-box;
+  vertical-align: text-top;
+}
+.mv-item{
+  width: 100%;
+  height: 188rpx;
+  overflow: hidden;
+   border-radius: 5px;
+}
+.mv-item .auto-img{
+  width: 100%;
+  height: 100%;
+}
+.mv-descript{
+  padding: 12rpx 4rpx 0 12rpx;
+}
+.mv-name{
+  font-size: 30rpx;
+  overflow:hidden; 
+  text-overflow:ellipsis;
+  display:-webkit-box; 
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:1; 
+}
+.mv-briefDesc{
+  margin-top: 6rpx;
+  font-size: 24rpx;
+  overflow:hidden; 
+  text-overflow:ellipsis;
+  display:-webkit-box; 
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:1; 
+}
