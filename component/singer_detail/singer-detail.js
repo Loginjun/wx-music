@@ -1,5 +1,8 @@
 // component/singer_detail/singer-detail.js
-const API_BASE_URL = 'http://47.100.48.11:4000';
+// const API_BASE_URL = 'http://neteasecloudmusicapi.zhaoboy.com';
+
+const API_BASE_URL = 'https://musicapi.leanapp.cn';
+
 Page({
   /**
    * 页面的初始数据

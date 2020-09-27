@@ -1,5 +1,5 @@
 // component/songsheet_list/songsheet-list.js
-const API_BASE_URL = 'http://47.100.48.11:4000';
+const API_BASE_URL = 'https://musicapi.leanapp.cn';
 
 // 歌单详情
 Page({

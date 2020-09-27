@@ -1,5 +1,9 @@
 // play.js
-const API_BASE_URL = 'http://47.100.48.11:4000';
+// const API_BASE_URL = 'http://47.100.48.11:4000';
+// const API_BASE_URL = 'http://neteasecloudmusicapi.zhaoboy.com';
+
+const API_BASE_URL = 'https://musicapi.leanapp.cn';
+const API_URL = 'https://music.163.com';
 const app = getApp();
 
 Page({
@@ -34,44 +38,46 @@ Page({
     console.log('把', app.globalData.songId, '传入全局变量中')
 
     const innerAudioContext = wx.createInnerAudioContext();
-
+    var musicUrl = API_URL+'/song/media/outer/url?id='+audioId+'.mp3'
     this.setData({
       innerAudioContext,
-      isPlay: true
+      isPlay: true,
+      music_url : musicUrl
     })
 
     // 请求歌曲音频的地址，失败则播放出错，成功则传值给createBgAudio(后台播放管理器，让其后台播放)
-    wx.request({
-      url: API_BASE_URL + '/song/url',
-      data: {
-        id: audioId
-      },
-      method: 'GET',
-      success: res => {
-        // console.log('歌曲音频url:', res.data.data[0])
-        if (res.data.data[0].url === null) {  //如果是MV 电台 广告 之类的就提示播放出错，并返回首页
-          // console.log('播放出错')
-          wx.showModal({
-            content: '服务器开了点小差~~',
-            cancelColor: '#DE655C',
-            confirmColor: '#DE655C',
-            showCancel: false,
-            confirmText: '返回',
-            complete() {
-              wx.navigateBack({
-                delta: 1
-              })
-            }
-          })
-        } else {
-          // 异步操作先等song赋值后才能拿到歌名赋值给后台播放器
-          setTimeout(()=>{
-            this.createBgAudio(res.data.data[0]);
-          },100)
-          // this.frontAudio(res.data.data[0])
-        }
-      }
-    })
+    // wx.request({
+    //   // url:  API_URL + '/song/media/outer/url?id='+audioId+'.mp3',
+    //   url: API_BASE_URL + '/song/url',
+    //   data: {
+    //     id: audioId
+    //   },
+    //   method: 'GET',
+    //   success: res => {
+    //     // console.log('歌曲音频url:', res.data.data[0])
+    //     if (res.data.data[0].url === null) {  //如果是MV 电台 广告 之类的就提示播放出错，并返回首页
+    //       // console.log('播放出错')
+    //       wx.showModal({
+    //         content: '服务器开了点小差~~',
+    //         cancelColor: '#DE655C',
+    //         confirmColor: '#DE655C',
+    //         showCancel: false,
+    //         confirmText: '返回',
+    //         complete() {
+    //           wx.navigateBack({
+    //             delta: 1
+    //           })
+    //         }
+    //       })
+    //     } else {
+    //       // 异步操作先等song赋值后才能拿到歌名赋值给后台播放器
+    //       setTimeout(()=>{
+    //         this.createBgAudio(res.data.data[0]);
+    //       },100)
+    //       // this.frontAudio(res.data.data[0])
+    //     }
+    //   }
+    // })
 
     //获取到歌曲音频，则显示出歌曲的名字，歌手的信息，即获取歌曲详情；如果失败，则播放出错。
     wx.request({
@@ -111,7 +117,9 @@ Page({
 
     // 获取歌词
     wx.request({
-      url: API_BASE_URL + '/lyric',
+      
+      // url: API_BASE_URL + '/lyric',
+      url: API_URL + '/api/song/media',
       data:{
         id:audioId
       },
@@ -119,7 +127,9 @@ Page({
       success: res => {
         // console.log('歌词',res.data)
         // 整理拿到的数组歌词
-        let arr = res.data.lrc.lyric;
+        // let arr = res.data.lrc.lyric;
+        let arr = res.data.lyric;
+
         let timearr = arr.split('[') 
         let obj = {}
         let lyricArr = []

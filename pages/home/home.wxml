@@ -11,7 +11,7 @@
 <!-- 轮播图 -->
 <view class="banner">
   <swiper style="height: {{swiperHeight}}px;" indicator-dots="{{isHasDots}}" indicator-color="{{dotsColor}}" indicator-active-color="{{dotsActiveColor}}" autoplay="{{isAutoPlay}}" interval="{{interval}}" duration="{{duration}}" circular="{{isCircular}}">
-    <swiper-item wx:for="{{banner}}" wx:key="{{index}}" bindtap="playSong" data-id="{{item.targetId}}">
+    <swiper-item wx:for="{{banner}}" wx:key="index" bindtap="playSong" data-id="{{item.targetId}}">
       <image class="auto-img" mode="widthFix" bindload="loadedImg" src="{{item.imageUrl}}"></image>
       <view class="type" style="background:{{item.titleColor}};">{{item.typeTitle}}</view>
     </swiper-item>
@@ -68,7 +68,7 @@
   </view>
   
   <view class="m-playlist-item">
-    <view class="m-list-item" wx:for="{{songsheet_index}}" wx:key="{{index}}" bindtap="showSheet" data-id="{{item.id}}">
+    <view class="m-list-item" wx:for="{{songsheet_index}}" wx:key="index" bindtap="showSheet" data-id="{{item.id}}">
       <view class="list-item">
         <image class="auto-img" mode="widthFix" src="{{item.picUrl}}"></image>
       </view>
@@ -84,13 +84,13 @@
   </view>
 
   <view class="new-mv-list">
-      <view class="mv-list-item" wx:for="{{newmv}}" wx:key="{{index}}" bindtap="showMV" data-id="{{item.id}}">
+      <view class="mv-list-item" wx:for="{{newmv}}" wx:key="index" bindtap="showMV" data-id="{{item.id}}">
         <view class="mv-item">
           <image class="auto-img" mode="widthFix" src="{{item.cover}}"></image>
         </view>
         <view class="mv-descript">
           <view class="mv-name">{{item.name}}</view>
-          <view class="mv-briefDesc">{{item.briefDesc}}</view>
+          <view class="mv-briefDesc">{{item.artistName}}</view>
         </view>
       </view>
   </view>
@@ -99,10 +99,10 @@
 <view class="m-song">
   <view class="m-title">
     <view class="m-tui">最新音乐 </view>
-    <view class="m-square">新歌推荐</view>
+    <view class="m-square" bindtap="showNewsong">新歌速递</view>
   </view>
     
-  <view class="song-list-item" wx:for="{{newsong}}" wx:key="{{index}}" data-id="{{item.id}}" bindtap="playSong">
+  <view class="song-list-item" wx:for="{{newsong}}" wx:key="index" data-id="{{item.id}}" bindtap="playSong">
     <view class="list-item">
       <view class="song">
         <view class="name">{{item.name}}</view>

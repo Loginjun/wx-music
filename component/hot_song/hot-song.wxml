@@ -29,7 +29,7 @@
   </view>
 </view>
 <view class="song-list">歌曲列表</view>
-<view class="song-list-item" wx:for="{{hotsong.tracks}}" wx:key="{{index}}" data-id="{{item.id}}" bindtap="playSong">
+<view class="song-list-item" wx:for="{{hotsong.tracks}}" wx:key="index" data-id="{{item.id}}" bindtap="playSong">
   <view class="list-item">
     <view class="num">
       <text>{{index+1}}</text>

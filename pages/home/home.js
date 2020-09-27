@@ -193,6 +193,12 @@ Page({
       url: '../../component/mv_list/mv-list',   //跳全部mv
     })
   },
+  showNewsong: function (e) {              //跳新歌速递,不想写了   API：http://neteasecloudmusicapi.zhaoboy.com/top/song
+    wx.showToast({
+      title: '别点了，没有了',
+      icon:'none'
+    })
+  },
   playSong:function(e){
     var id = e.currentTarget.dataset.id;
     console.log('songId==>',id)

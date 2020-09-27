@@ -7,7 +7,7 @@
         </view>
         <view class="mv-descript">
           <view class="mv-name">{{item.name}}</view>
-          <view class="mv-briefDesc">{{item.briefDesc}}</view>
+          <view class="mv-briefDesc">{{item.artistName}}</view>
         </view>
       </view>
   </view>

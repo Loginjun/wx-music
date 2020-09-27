@@ -17,7 +17,7 @@ Page({
   },
   getNewmv: function () {
     API.getNewmv({
-
+      
     }).then(res => {
       wx.hideLoading()
       if (res.code === 200) { //更加严谨

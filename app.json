@@ -23,28 +23,7 @@
     "navigationBarTitleText": "MUSIC",
     "navigationBarTextStyle": "white"
   },
-  "tabBar": {
-    "list": [
-      {
-        "pagePath": "pages/home/home",
-        "text": "乐库",
-        "iconPath": "./images/music.png",
-        "selectedIconPath": "./images/music_active.png"
-      },
-      {
-        "pagePath": "pages/collect/collect",
-        "text": "正在播放",
-        "iconPath": "./images/collect.png",
-        "selectedIconPath": "./images/collect_active.png"
-      },
-      {
-        "pagePath": "pages/mine/mine",
-        "text": "我的",
-        "iconPath": "./images/mine.png",
-        "selectedIconPath": "./images/mine_active.png"
-      }
-    ]
-  },
+
   "requiredBackgroundModes": [
     "audio"
   ],

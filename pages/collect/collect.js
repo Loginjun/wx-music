@@ -15,6 +15,14 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var song = wx.getStorageSync('')
+    // if(){
+    //   wx.navigateTo({
+    //     url: '../../component/play_music/play',
+    //   })
+    // }else{
+      
+    // }
     
   },
 

@@ -1,11 +1,12 @@
 <!-- play.wxml -->
 <image src="{{songImg}}" class="background_img" ></image>
+<audio src="{{music_url}}" hidden></audio>
 <view class="body">
  <!-- 歌名歌手 -->
   <view class="sing-brief">
     <view class="sing-name">{{song.name}}</view>
     <view class="singer-name">
-      <text wx:for="{{song.ar}}" wx:key="{{index}}" class="singer-name-text">{{item.name}}</text>
+      <text wx:for="{{song.ar}}" wx:key="index" class="singer-name-text">{{item.name}}</text>
     </view>
   </view>
   <!-- 封面 -->
@@ -16,7 +17,7 @@
     </view>
     <view class="song-lyric" hidden="{{showLyric}}">
       <scroll-view class="middle" scroll-y="true" scroll-top="{{scrolltop}}">
-      <view class="lyric-height" wx:for="{{lyric}}" wx:key="{{index}}">
+      <view class="lyric-height" wx:for="{{lyric}}" wx:key="index">
         <text class="songLyric">{{item}}</text>
       </view>
       </scroll-view>
